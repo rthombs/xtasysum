@@ -71,13 +71,11 @@ The options that can be abbreviated:
     
 # References 
 
-References
+Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." Socius:1-12
 
-    Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." Socius:1-12
+Shin, Yongcheol, Byungchul Yu, and Matthew Greenwood-Nimmo. 2014. "Modelling Asymmetric Cointegration and Dynamic Multipliers in a Nonlinear ARDL Framework." Pp. 281–314 in Festschrift in Honor of Peter Schmidt, edited by R. Sickle C. Horrace. New York: Springer.
 
-    Shin, Yongcheol, Byungchul Yu, and Matthew Greenwood-Nimmo. 2014. "Modelling Asymmetric Cointegration and Dynamic Multipliers in a Nonlinear ARDL Framework." Pp. 281–314 in Festschrift in Honor of Peter Schmidt, edited by R. Sickle C. Horrace. New York: Springer.
-
-    Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2021. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." Sociological Methodology.
+Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2021. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." Sociological Methodology.
 
 
 # Author
