@@ -9,22 +9,22 @@ A Stata command to generate and summarize partial sums for modeling asymmetry wi
 
 ## Options
 
-    `Threshold` specifies the threshold by which the partial sums are generated; default is Threshold(0).
+`Threshold` specifies the threshold by which the partial sums are generated; default is Threshold(0).
 
-    `Frequency` creates a table containing the probability transitions and frequencies of the partial sums by each variable in varlist; see tab and xttrans.
+`Frequency` creates a table containing the probability transitions and frequencies of the partial sums by each variable in varlist; see tab and xttrans.
 
-    `Sum` creates a summary table of the partial sums for each variable in varlist; see xtsum.
+`Sum` creates a summary table of the partial sums for each variable in varlist; see xtsum.
 
-    `fd` generates a variable containing the first differences that the partial sums are generated from.
+`fd` generates a variable containing the first differences that the partial sums are generated from.
 
-    `al` generates the positive and negative changes based on Allison's (2019) definition. When a static model is estimated with the within estimator, this will
+`al` generates the positive and negative changes based on Allison's (2019) definition. When a static model is estimated with the within estimator, this will
     produce equivalent results to the partial sums, but not in the dynamic case (Thombs, Huang, and Fitzgerald 2022).
 
-    `GRSum` generates a line graph of the partial sums by panel. No graph is drawn, but a graph for each variable is saved.
+`GRSum` generates a line graph of the partial sums by panel. No graph is drawn, but a graph for each variable is saved.
 
-    `GRFre` generates a bar graph of the frequencies of the partial sums by panel. No graph is drawn, but a graph for each variable is saved.
+`GRFre` generates a bar graph of the frequencies of the partial sums by panel. No graph is drawn, but a graph for each variable is saved.
 
-    `NOgen` does not create partial sums for the variable. This option cannot be combined with threshold.
+`NOgen` does not create partial sums for the variable. This option cannot be combined with threshold.
 
  # Example 
     
