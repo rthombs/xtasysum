@@ -20,7 +20,7 @@ A Stata command to generate and summarize partial sums for modeling asymmetry wi
 `fd` generates a variable containing the first differences that the partial sums are generated from.
 
 `al` generates the positive and negative changes based on Allison's (2019) definition. When a static model is estimated with the within estimator, this will
-    produce equivalent results to the partial sums, but not in the dynamic case (Thombs, Huang, and Fitzgerald 2022).
+    produce the same results as the partial sums, but not in the dynamic case (Thombs, Huang, and Fitzgerald 2022).
 
 `GRSum` generates a line graph of the partial sums by panel. No graph is drawn, but a graph for each variable is saved.
 
