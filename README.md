@@ -73,7 +73,7 @@ The options that can be abbreviated:
     
 # References 
 
-Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." *Socius*:1-12. 
+Allison, Paul D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." *Socius*:1-12. 
 
 Bailey, Natalia., George Kapetanios, and M. Hashem Pesaran. 2016. "Exponent of Cross-Sectional Dependence: Estimation and Inference." *Journal of Applied Econometrics* 31: 929-960.
 
