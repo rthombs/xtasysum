@@ -15,7 +15,7 @@ A Stata command to generate and summarize partial sums for modeling asymmetry wi
 
 `Sum` creates a summary table of the partial sums for each variable in varlist; see `xtsum`.
 
-`csd` reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and Pesaran 2016,2019); This is a wrapper of Ditzen's (2021) `xtcse2` program.
+`csd` reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and Pesaran 2016, 2019); This is a wrapper of Ditzen's (2021) `xtcse2` program.
 
 `fd` generates a variable containing the first differences that the partial sums are generated from.
 
