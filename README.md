@@ -30,7 +30,7 @@ A Stata command to generate and summarize partial sums for modeling asymmetry wi
 
  # Example 
     
-An example dataset consisting of annual country-level data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015 is available {browse "https://github.com/rthombs/eiwb/blob/main.dta":here}.
+An example dataset consisting of annual country-level data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015 is available [here]("https://github.com/rthombs/eiwb/blob/main.dta").
 
 To generate the partial sums:
 
