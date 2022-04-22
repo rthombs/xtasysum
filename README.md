@@ -73,19 +73,19 @@ The options that can be abbreviated:
     
 # References 
 
-Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." Socius:1-12. 
+Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." *Socius*:1-12. 
 
-Bailey, N., G. Kapetanios and M. H. Pesaran. 2016. Exponent of cross-sectional dependence: estimation and inference. Journal of Applied Econometrics 31: 929-960.
+Bailey, Natalia., George Kapetanios, and M. Hashem Pesaran. 2016. "Exponent of Cross-Sectional Dependence: Estimation and Inference." *Journal of Applied Econometrics* 31: 929-960.
 
-Bailey, N., G. Kapetanios and M. H. Pesaran. 2019. Exponent of Cross-sectional Dependence for Residuals. Sankhya B. The Indian Journal of Statistics. 
+Bailey, Natalia, George Kapetanios, and M. Hashem Pesaran. 2019. "Exponent of Cross-sectional Dependence for Residuals." *Sankhya B* 81: 46–102. 
 
-Ditzen, J. (2021). Estimating long-run effects and the exponent of cross-sectional dependence: An update to xtdcce2. The Stata Journal, 21(3), 687-707.
+Ditzen, Jan. 2021. "Estimating Long-Run Effects and the Exponent of Cross-Sectional Dependence: An Update to xtdcce2." *The Stata Journal*, 21(3): 687-707.
 
-Pesaran, M. H. 2015. Testing Weak Cross-Sectional Dependence in Large Panels. Econometric Reviews 34(6-10):1089–1117.
+Pesaran, M. Hashem. 2015. "Testing Weak Cross-Sectional Dependence in Large Panels." *Econometric Reviews* 34(6-10): 1089–1117.
 
 Shin, Yongcheol, Byungchul Yu, and Matthew Greenwood-Nimmo. 2014. "Modelling Asymmetric Cointegration and Dynamic Multipliers in a Nonlinear ARDL Framework." Pp. 281–314 in Festschrift in Honor of Peter Schmidt, edited by R. Sickle C. Horrace. New York: Springer.
 
-Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2021. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." Sociological Methodology.
+Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2021. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." *Sociological Methodology* 52(1): 1-29. 
 
 
 # Author
