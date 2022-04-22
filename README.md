@@ -11,9 +11,11 @@ A Stata command to generate and summarize partial sums for modeling asymmetry wi
 
 `Threshold` specifies the threshold by which the partial sums are generated; default is `Threshold(0)`.
 
-`Frequency` creates a table containing the probability transitions and frequencies of the partial sums by each variable in varlist; see tab.
+`Frequency` creates a table containing the probability transitions and frequencies of the partial sums by each variable in varlist; see `tab`.
 
-`Sum` creates a summary table of the partial sums for each variable in varlist; see xtsum.
+`Sum` creates a summary table of the partial sums for each variable in varlist; see `xtsum`.
+
+`csd` reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and Pesaran 2016,2019); This is a wrapper of Ditzen's (2021) `xtcse2` program.
 
 `fd` generates a variable containing the first differences that the partial sums are generated from.
 
@@ -71,7 +73,15 @@ The options that can be abbreviated:
     
 # References 
 
-Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." Socius:1-12
+Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." Socius:1-12. 
+
+Bailey, N., G. Kapetanios and M. H. Pesaran. 2016. Exponent of cross-sectional dependence: estimation and inference. Journal of Applied Econometrics 31: 929-960.
+
+Bailey, N., G. Kapetanios and M. H. Pesaran. 2019. Exponent of Cross-sectional Dependence for Residuals. Sankhya B. The Indian Journal of Statistics. 
+
+Ditzen, J. (2021). Estimating long-run effects and the exponent of cross-sectional dependence: An update to xtdcce2. The Stata Journal, 21(3), 687-707.
+
+Pesaran, M. H. 2015. Testing Weak Cross-Sectional Dependence in Large Panels. Econometric Reviews 34(6-10):1089–1117.
 
 Shin, Yongcheol, Byungchul Yu, and Matthew Greenwood-Nimmo. 2014. "Modelling Asymmetric Cointegration and Dynamic Multipliers in a Nonlinear ARDL Framework." Pp. 281–314 in Festschrift in Honor of Peter Schmidt, edited by R. Sickle C. Horrace. New York: Springer.
 
