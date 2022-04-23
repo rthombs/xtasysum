@@ -11,7 +11,7 @@ A Stata command to generate and summarize partial sums for modeling asymmetry wi
 
 `Threshold` specifies the threshold by which the partial sums are generated; default is `Threshold(0)`.
 
-`Frequency` creates a table containing the probability transitions and frequencies of the partial sums by each variable in varlist; see `tab`.
+`Frequency` creates a table containing the frequencies of the partial sums by each variable in varlist; see `tab`.
 
 `Sum` creates a summary table of the partial sums for each variable in varlist; see `xtsum`.
 
