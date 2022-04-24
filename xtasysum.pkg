@@ -1,0 +1,5 @@
+v 3
+d xtasysum. Generate and summarize partial sums for modeling asymmetry with panel data.
+d Ryan P. Thombs, Boston College.
+f xtasysum.ado
+f xtasysum.sthlp

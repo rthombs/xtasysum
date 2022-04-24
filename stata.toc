@@ -1,0 +1,3 @@
+v 3
+d Ryan P. Thombs, Boston College
+p xtasysum Generate and summarize partial sums for modeling asymmetry with panel data.
