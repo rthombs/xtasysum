@@ -85,7 +85,7 @@ Pesaran, M. Hashem. 2015. "Testing Weak Cross-Sectional Dependence in Large Pane
 
 Shin, Yongcheol, Byungchul Yu, and Matthew Greenwood-Nimmo. 2014. "Modelling Asymmetric Cointegration and Dynamic Multipliers in a Nonlinear ARDL Framework." Pp. 281–314 in Festschrift in Honor of Peter Schmidt, edited by R. Sickle C. Horrace. New York: Springer.
 
-Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2021. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." *Sociological Methodology* 52(1): 1-29. 
+Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2022. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." *Sociological Methodology* 52(1): 1-29. 
 
 
 # Author
