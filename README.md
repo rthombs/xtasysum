@@ -36,7 +36,7 @@ To generate the partial sums:
 
         xtasysum lngdp
 
-The default threshold is 0, which can be changed with the Threshold option:
+The default threshold is 0, which can be changed with the `Threshold` option:
 
         xtasysum lngdp, threshold(.01)
 
