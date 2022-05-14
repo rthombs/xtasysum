@@ -10,14 +10,17 @@
 {title:Syntax}
 
 {phang}
-{cmd:xtasysum} {varlist} {ifin} [{cmd:,} {cmd:Threshold(}{it:#}{cmd:)} {cmd:Frequency} {cmd:Sum} {cmd:fdm} {cmd:GRSum} {cmd:GRFre} {cmd:grssave(}{it:string}{cmd:)} {cmd:grfsave(}{it:string}{cmd:)} {cmd:csd} {cmd:CSDOpt(}{it:string asis}{cmd:)} {cmd:cips(}{it:numlist integer min=2 max=2}{cmd:)} {cmd:CIPSOpt(}{it:string asis}{cmd:)} {cmd:NOgen}]
+{cmd:xtasysum} {varlist} {ifin} [{cmd:,} {cmd:Threshold(}{it:#}{cmd:)} {cmd:Frequency} {cmd:Sum} {cmd:fdm} {cmd:GRSum} {cmd:GRFre} {cmd:grssave(}{it:string}{cmd:)} 
+{cmd:grfsave(}{it:string}{cmd:)} {cmd:csd} {cmd:CSDOpt(}{it:string asis}{cmd:)} {cmd:cips(}{it:numlist integer min=2 max=2}{cmd:)} {cmd:CIPSOpt(}{it:string asis}
+{cmd:)} {cmd:NOgen}]
 
 
 {title:Description}
 
-{p 4 4 4}{cmd:xtasysum} generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial sums around a threshold of zero are created. 
-The two new variables appear as {it:var}_p and {it:var}_n, respectively. The variables can then be used to model and test for asymmetry using regression analysis. The user may also generate frequencies and summary statistics, test for cross-sectional dependence and non-stationarity, and 
-generate graphs of the frequencies and partial sums. 
+{p 4 4 4}{cmd:xtasysum} generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial 
+sums around a threshold of zero are created. The two new variables appear as {it:var}_p and {it:var}_n, respectively. The variables can then be used to model and
+test for asymmetry using regression analysis. The user may also generate frequencies and summary statistics, test for cross-sectional dependence and non-stationarity,
+and generate graphs of the frequencies and partial sums. 
 
 
 {title:Options}
