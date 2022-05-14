@@ -41,11 +41,14 @@ and generate graphs of the frequencies and partial sums.
 
 {phang}{opt grfsave(string)} saves the bar graph of the partial sums by panel with a specified name. 
 
-{phang}{opt csd} reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and Pesaran 2016, 2019). This is a wrapper of Ditzen's (2021) {stata xtcse2} program.
+{phang}{opt csd} reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and 
+Pesaran 2016, 2019). This is a wrapper of Ditzen's (2021) {stata xtcse2} program.
 
 {phang}{opt CSDOpt(string asis)} passes options to {stata xtcse2}.
 
-{phang}{opt cips(numlist integer min=2 max=2)} reports the Pesaran (2007) panel unit-root test in the presence of cross-sectional dependence. This is a wrapper of the {stata xtcips} program (Burdisso and Sangiácomo 2016). The first integer refers to the maximum number of lags included in the test, and the second integer is the autocorrelation order used in the Lagrange multiplier test (see {help xtcips}).
+{phang}{opt cips(numlist integer min=2 max=2)} reports the Pesaran (2007) panel unit-root test in the presence of cross-sectional dependence. This is a wrapper 
+of the {stata xtcips} program (Burdisso and Sangiácomo 2016). The first integer refers to the maximum number of lags included in the test, and the second integer 
+is the autocorrelation order used in the Lagrange multiplier test (see {help xtcips}).
 
 {phang}{opt CIPSOpt(string asis)} passes options to {stata xtcips}.
 
@@ -55,7 +58,8 @@ and generate graphs of the frequencies and partial sums.
 
 {title:Examples}
 
-{p 4 4}The following examples are based on an {browse "https://github.com/rthombs/xtasysum/blob/example.dta":example dataset} consisting of annual country-level data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015. 
+{p 4 4}The following examples are based on an {browse "https://github.com/rthombs/xtasysum/blob/example.dta":example dataset} consisting of annual country-level 
+data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015. 
 
 {p 4}To generate the partial sums:
 
@@ -95,7 +99,8 @@ and generate graphs of the frequencies and partial sums.
 
 {p 4 8} Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." {it:Socius}:1-12
 
-{p 4 8} Bailey, Natalia, George Kapetanios, and M. Hashem Pesaran. 2016. "Exponent of Cross-Sectional Dependence: Estimation and Inference." {it:Journal of Applied Econometrics} 31: 929-960.
+{p 4 8} Bailey, Natalia, George Kapetanios, and M. Hashem Pesaran. 2016. "Exponent of Cross-Sectional Dependence: Estimation and Inference." 
+{it:Journal of Applied Econometrics} 31: 929-960.
 
 {p 4 8} Bailey, Natalia, George Kapetanios, and M. Hashem Pesaran. 2019. "Exponent of Cross-sectional Dependence for Residuals." {it:Sankhya B} 81: 46–102.
 
@@ -105,9 +110,11 @@ and generate graphs of the frequencies and partial sums.
 
 {p 4 8} Pesaran, M. Hashem. 2015. "Testing Weak Cross-Sectional Dependence in Large Panels." {it:Econometric Reviews} 34(6-10): 1089–1117
 
-{p 4 8} Shin, Yongcheol, Byungchul Yu, and Matthew Greenwood-Nimmo. 2014. "Modelling Asymmetric Cointegration and Dynamic Multipliers in a Nonlinear ARDL Framework." Pp. 281–314 in {it:Festschrift in Honor of Peter Schmidt}, edited by R. Sickles and W. C. Horrace. New York: Springer.
+{p 4 8} Shin, Yongcheol, Byungchul Yu, and Matthew Greenwood-Nimmo. 2014. "Modelling Asymmetric Cointegration and Dynamic Multipliers in a Nonlinear 
+ARDL Framework." Pp. 281–314 in {it:Festschrift in Honor of Peter Schmidt}, edited by R. Sickles and W. C. Horrace. New York: Springer.
 
-{p 4 8} Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2022. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." {it:Sociological Methodology} 52(1): 1-29.
+{p 4 8} Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2022. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, 
+Large-T Data." {it:Sociological Methodology} 52(1): 1-29.
 
 {p 4 8} York, Richard and Ryan Light. 2017. "Directional Asymmetry in Sociological Analyses." {it:Socius} 3.
 
