@@ -15,7 +15,8 @@
 
 {title:Description}
 
-{p 4 4}{cmd:xtasysum} generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial sums around a threshold of zero are created. The two new variables appear as {it:var}_p and {it:var}_n, respectively. The variables can then be used to model and test for asymmetry using regression analysis. The user may also generate frequencies and summary statistics, test for cross-sectional dependence and non-stationarity, and 
+{p 4 4 4}{cmd:xtasysum} generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial sums around a threshold of zero are created. 
+The two new variables appear as {it:var}_p and {it:var}_n, respectively. The variables can then be used to model and test for asymmetry using regression analysis. The user may also generate frequencies and summary statistics, test for cross-sectional dependence and non-stationarity, and 
 generate graphs of the frequencies and partial sums. 
 
 
@@ -51,7 +52,7 @@ generate graphs of the frequencies and partial sums.
 
 {title:Examples}
 
-{p 4 4}An {browse "https://github.com/rthombs/xtasysum/blob/example.dta":example dataset} consisting of annual country-level data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015 is available {browse "https://github.com/rthombs/xtasysum/blob/main/example.dta":here}. 
+{p 4 4}The following examples are based on an {browse "https://github.com/rthombs/xtasysum/blob/example.dta":example dataset} consisting of annual country-level data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015. 
 
 {p 4}To generate the partial sums:
 
