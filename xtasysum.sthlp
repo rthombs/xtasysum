@@ -1,6 +1,6 @@
 {smcl}
-{* *! Version 1.0 4jan2022}
-{hi:help xtasysum}{right: Version 1.0 January 4, 2022}
+{* *! Version 1.1 13May2022}
+{hi:help xtasysum}{right: Version 1.1 May 13, 2022}
 {hline}
 {title:Title}
 
@@ -10,31 +10,39 @@
 {title:Syntax}
 
 {phang}
-{cmd:xtasysum} {varlist} {ifin} [{cmd:,} {cmd:Threshold(}{it:#}{cmd:)} {cmd:Frequency} {cmd:Sum} {cmd:csd} {cmd:fd} {cmd:al} {cmd:GRSum} {cmd:GRFre} {cmd:NOgen}]
+{cmd:xtasysum} {varlist} {ifin} [{cmd:,} {cmd:Threshold(}{it:#}{cmd:)} {cmd:Frequency} {cmd:Sum} {cmd:fdm} {cmd:GRSum} {cmd:GRFre} {cmd:grssave(}{it:string}{cmd:)} {cmd:grfsave(}{it:string}{cmd:)} {cmd:csd} {cmd:CSDOpt(}{it:string asis}{cmd:)} {cmd:cips(}{it:numlist integer min=2 max=2}{cmd:)} {cmd:CIPSOpt(}{it:string asis}{cmd:)} {cmd:NOgen}]
 
 
 {title:Description}
 
-{p 4 4}{cmd:xtasysum} generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial sums around a threshold of zero are created. The variables can then be used to model and test for asymmetry using regression analysis. For descriptive purposes, the user may also generate frequencies, transition probabilities, and summary tables, as well graphs for the frequencies and partial sums. 
+{p 4 4}{cmd:xtasysum} generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial sums around a threshold of zero are created. The two new variables appear as {it:var}_p and {it:var}_n, respectively. The variables can then be used to model and test for asymmetry using regression analysis. The user may also generate frequencies and summary statistics, test for cross-sectional dependence and non-stationarity, and generate graphs of the frequencies and partial sums. 
 
 
 {title:Options}
 
-{phang}{opt Threshold} specifies the threshold by which the partial sums are generated; default is {cmd:Threshold(0)}. 
+{phang}{opt Threshold(#)} specifies the threshold by which the partial sums are generated; default is {cmd:Threshold(0)}. 
 
-{phang}{opt Frequency} creates a table containing the frequencies of the partial sums by each variable in {varlist}; see {help tab}.
-
-{phang}{opt csd} reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and Pesaran 2016, 2019); This is a wrapper of Ditzen's (2021) {stata xtcse2} program.
+{phang}{opt Frequency} creates a table containing the frequencies of the partial sums by each variable in {varlist}.
 
 {phang}{opt Sum} creates a summary table of the partial sums for each variable in {varlist}; see {help xtsum}.
 
-{phang}{opt fd} generates a variable containing the first differences that the partial sums are generated from. 
-
-{phang}{opt al} generates the positive and negative changes based on Allison's (2019) definition. When a static model is estimated with the within estimator, this will produce the same results as the partial sums, but not in the dynamic case (see Thombs, Huang, and Fitzgerald 2022).
+{phang}{opt fdm} generates a variable of the partial sums based on the first difference method (see Allison (2019) and York and Light (2017)). 
 
 {phang}{opt GRSum} generates a line graph of the partial sums by panel. No graph is drawn, but a graph for each variable is saved. 
 
 {phang}{opt GRFre} generates a bar graph of the frequencies of the partial sums by panel. No graph is drawn, but a graph for each variable is saved. 
+
+{phang}{opt grssave(string)} saves the line graph of the partial sums by panel with a specified name. 
+
+{phang}{opt grfsave(string)} saves the bar graph of the partial sums by panel with a specified name. 
+
+{phang}{opt csd} reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and Pesaran 2016, 2019). This is a wrapper of Ditzen's (2021) {stata xtcse2} program.
+
+{phang}{opt CSDOpt(string asis)} passes options to {stata xtcse2}.
+
+{phang}{opt cips(numlist integer min=2 max=2)} reports the Pesaran (2007) panel unit-root test in the presence of cross-sectional dependence. This is a wrapper of the {stata xtcips} program (Burdisso and Sangiácomo 2016). When specified, the first integer refers to the maximum number of lags included in the test, and the second number is the autocorrelation order used in the Lagrange multiplier test (see {help xtcips}).
+
+{phang}{opt CIPSOpt(string asis)} passes options to {stata xtcips}.
 
 {phang}{opt NOgen} does not create partial sums for the variable. This option cannot be combined with {opt threshold}. 
 
@@ -56,17 +64,17 @@
 
 {p 8}{stata xtasysum lngdp, frequency sum} 
 
-{p 4 4}To test for cross-sectional dependence:
+{p 4 4}To test for cross-sectional dependence and non-stationarity:
 
-{p 8}{stata xtasysum lngdp, csd} 
+{p 8}{stata xtasysum lngdp, csd cips(3 3)} 
 
 {p 4}To generate a graph of the frequencies and partial sums:
 
-{p 8}{stata xtasysum lngdp, grsum grfre} 
+{p 8}{stata xtasysum lngdp, grfre grsum} 
 
-{p 4}To generate variables based on Allison's (2019) definition:
+{p 4}To generate variables using the first difference method:
 
-{p 8}{stata xtasysum lngdp, al} 
+{p 8}{stata xtasysum lngdp, fdm} 
 
 {p 4}If the partial sums are already defined:
 
@@ -82,9 +90,11 @@
 
 {p 4 8} Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." {it:Socius}:1-12
 
-{p 4 8} Bailey, Natalia., George Kapetanios, and M. Hashem Pesaran. 2016. "Exponent of Cross-Sectional Dependence: Estimation and Inference." {it:Journal of Applied Econometrics} 31: 929-960.
+{p 4 8} Bailey, Natalia, George Kapetanios, and M. Hashem Pesaran. 2016. "Exponent of Cross-Sectional Dependence: Estimation and Inference." {it:Journal of Applied Econometrics} 31: 929-960.
 
 {p 4 8} Bailey, Natalia, George Kapetanios, and M. Hashem Pesaran. 2019. "Exponent of Cross-sectional Dependence for Residuals." {it:Sankhya B} 81: 46–102.
+
+{p 4 8} Burdisso, Tamara and Máximo Sangiácomo. 2016. "Panel Time Series: Review of the Methodological Evolution." {it:The Stata Journal} 16(2): 424-442.
 
 {p 4 8} Ditzen, Jan. 2021. "Estimating Long-Run Effects and the Exponent of Cross-Sectional Dependence: An Update to xtdcce2." {it:The Stata Journal}, 21(3): 687-707.
 
@@ -93,6 +103,8 @@
 {p 4 8} Shin, Yongcheol, Byungchul Yu, and Matthew Greenwood-Nimmo. 2014. "Modelling Asymmetric Cointegration and Dynamic Multipliers in a Nonlinear ARDL Framework." Pp. 281–314 in {it:Festschrift in Honor of Peter Schmidt}, edited by R. Sickles and W. C. Horrace. New York: Springer.
 
 {p 4 8} Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2022. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." {it:Sociological Methodology} 52(1): 1-29.
+
+{p 4 8} York, Richard and Ryan Light. 2017. "Directional Asymmetry in Sociological Analyses. {it:Socius} 3.
 
 
 
