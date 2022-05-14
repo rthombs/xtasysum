@@ -15,7 +15,7 @@
 
 {title:Description}
 
-{p 4 4}{cmd:xtasysum} generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial sums around a threshold of zero are created. The two new variables appear as *var*_p and *var*_n, respectively. The variables can then be used to model and test for asymmetry using regression analysis. The user may also generate frequencies and summary statistics, test for cross-sectional dependence and non-stationarity, and generate graphs of the frequencies and partial sums. 
+{p 4 4}{cmd:xtasysum} generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial sums around a threshold of zero are created. The two new variables appear as {it:var}_p and {it:var}_n, respectively. The variables can then be used to model and test for asymmetry using regression analysis. The user may also generate frequencies and summary statistics, test for cross-sectional dependence and non-stationarity, and generate graphs of the frequencies and partial sums.
 
 
 {title:Options}
@@ -40,7 +40,7 @@
 
 {phang}{opt CSDOpt(string asis)} passes options to {stata xtcse2}.
 
-{phang}{opt cips(numlist integer min=2 max=2)} reports the Pesaran (2007) panel unit-root test in the presence of cross-sectional dependence. This is a wrapper of the {stata xtcips} program (Burdisso and Sangiácomo 2016). When specified, the first integer refers to the maximum number of lags included in the test, and the second integer is the autocorrelation order used in the Lagrange multiplier test (see {help xtcips}).
+{phang}{opt cips(numlist integer min=2 max=2)} reports the Pesaran (2007) panel unit-root test in the presence of cross-sectional dependence. This is a wrapper of the {stata xtcips} program (Burdisso and Sangiácomo 2016). The first integer refers to the maximum number of lags included in the test, and the second integer is the autocorrelation order used in the Lagrange multiplier test (see {help xtcips}).
 
 {phang}{opt CIPSOpt(string asis)} passes options to {stata xtcips}.
 
@@ -50,7 +50,7 @@
 
 {title:Examples}
 
-{p 4 4}An example dataset consisting of annual country-level data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015 is available [here](https://github.com/rthombs/eiwb/blob/main/example.dta).
+{p 4 4}An example dataset consisting of annual country-level data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015 is available {browse "https://github.com/rthombs/xtasysum/blob/main/example.dta":here} 
 
 {p 4}To generate the partial sums:
 
