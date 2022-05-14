@@ -51,7 +51,7 @@ generate graphs of the frequencies and partial sums.
 
 {title:Examples}
 
-{p 4 4}An example dataset consisting of annual country-level data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015 is available {browse "https://github.com/rthombs/xtasysum/blob/main/example.dta":here}. 
+{p 4 4}An {browse "https://github.com/rthombs/xtasysum/blob/mple.dta":example dataset} consisting of annual country-level data for GDP per capita, the percentage of the population residing in urban areas, and total population from 1971 to 2015 is available {browse "https://github.com/rthombs/xtasysum/blob/main/example.dta":here}. 
 
 {p 4}To generate the partial sums:
 
