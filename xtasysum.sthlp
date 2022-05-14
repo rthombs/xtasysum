@@ -11,8 +11,8 @@
 
 {phang}
 {cmd:xtasysum} {varlist} {ifin} [{cmd:,} {cmd:Threshold(}{it:#}{cmd:)} {cmd:Frequency} {cmd:Sum} {cmd:fdm} {cmd:GRSum} {cmd:GRFre} {cmd:grssave(}{it:string}{cmd:)} 
-{cmd:grfsave(}{it:string}{cmd:)} {cmd:csd} {cmd:CSDOpt(}{it:string asis}{cmd:)} {cmd:cips(}{it:numlist integer min=2 max=2}{cmd:)} {cmd:CIPSOpt(}{it:string asis}
-{cmd:)} {cmd:NOgen}]
+{cmd:grfsave(}{it:string}{cmd:)} {cmd:csd} {cmd:CSDOpt(}{it:string asis}{cmd:)} {cmd:cips(}{it:numlist integer min=2 max=2}{cmd:)} 
+{cmd:CIPSOpt(}{it:string asis}{cmd:)} {cmd:NOgen}]
 
 
 {title:Description}
