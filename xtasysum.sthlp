@@ -104,7 +104,7 @@
 
 {p 4 8} Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2022. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." {it:Sociological Methodology} 52(1): 1-29.
 
-{p 4 8} York, Richard and Ryan Light. 2017. "Directional Asymmetry in Sociological Analyses. {it:Socius} 3.
+{p 4 8} York, Richard and Ryan Light. 2017. "Directional Asymmetry in Sociological Analyses." {it:Socius} 3.
 
 
 
