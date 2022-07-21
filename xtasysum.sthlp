@@ -122,7 +122,7 @@ Large-T Data." {it:Sociological Methodology} 52(1): 1-29.
 
 {marker Acknowledgements}{title:Acknowledgements}
 
-Special thanks to Jared Fitzgerald and Xiaorui Huang for helpful comments and suggestions. 
+{phang}Special thanks to Jared Fitzgerald and Xiaorui Huang for helpful comments and suggestions. 
 
 
 {marker about}{title:Author}
