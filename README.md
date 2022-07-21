@@ -78,7 +78,7 @@ This will produce the following graphs:
 
 `xtasysum` can be installed by typing the following in Stata:
 
-    net install xtasysum, from("https://raw.githubusercontent.com/rthombs/xtasysum/main")
+    net install xtasysum, from("https://raw.githubusercontent.com/rthombs/xtasysum/main") replace
     
 # References 
 
