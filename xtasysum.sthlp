@@ -90,9 +90,9 @@ data for GDP per capita, the percentage of the population residing in urban area
 
 {p 8}{stata xtasysum lngdp, fdm} 
 
-{p 4}If the partial sums are already defined:
+{p 4}If the partial sums are already defined and you want to test for cross-sectional dependence:
 
-{p 8}{stata xtasysum lngdp_p lngdp_n, nogen} 
+{p 8}{stata xtasysum lngdp_p lngdp_n, nogen csd} 
 
 
 
