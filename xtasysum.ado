@@ -139,7 +139,7 @@ program define xtasysum, rclass sortpreserve
 		
 		
 			
-		***Generate variables based on Allison (2019) defintion of the first difference method
+		***Generate variables based on Allison (2019) definition of the first difference method
 		if "`fdm'" == "fdm"{
 			foreach v of varlist `varlist'{	
 				tempvar diff`v'
@@ -212,7 +212,7 @@ program define xtasysum, rclass sortpreserve
 			di as text "{hline 13}{c TT}{hline 75}" 
 			di as text _col(14) "{c |}" _col(20) "CD-Test" _col(55) "Exponent"  
 			di as text _col(14) "{c |}" " "
-			di as text " Variables   {c |}" _col(17) "CD" _col(28) "p-value"  _col(45) "alpha"  _col(55) "Std. Err."  _col(66) "[95% Conf. Interval]" 
+			di as text " Variables   {c |}" _col(17) "CD" _col(28) "p-value"  _col(42) "alpha"  _col(51) "Std. Err."  _col(64) "[95% Conf. Interval]" 
 			di as text "{hline 13}{c +}{hline 75}" 
 			local cv = invnorm(1 - ((100-95)/100)/2)
 			foreach v of varlist `varlist2' {
@@ -224,7 +224,7 @@ program define xtasysum, rclass sortpreserve
 				matrix `cmat'[`i',4] = r(alphaSE)
 				loc cown "`cown' `v'"
 				di as text %12s abbrev("`v'",12) " {c |}" _c
-				di as result _column(15) %9.3f `cmat'[`i',1]  _column(23) %9.3f `cmat'[`i',2] _column(41) %9.3f `cmat'[`i',3]  _column(51) %9.3f `cmat'[`i',4] _column(63) %9.3f `cmat'[`i',3]-`cv'*`cmat'[`i',4] _column(76) %9.3f `cmat'[`i',3]+`cv'*`cmat'[`i',4]
+				di as result _column(17) %-9.3f `cmat'[`i',1]  _column(28) %-9.3f `cmat'[`i',2] _column(42) %-9.3f `cmat'[`i',3]  _column(51) %-9.3f `cmat'[`i',4] _column(63) %-9.3f `cmat'[`i',3]-`cv'*`cmat'[`i',4] _column(75) %-9.3f `cmat'[`i',3]+`cv'*`cmat'[`i',4]
 			}
 			di as text "{hline 13}{c BT}{hline 75}" 
 			di "CD and its p-value correspond to Pesaran's (2015) test for weak cross-sectional dependence."
