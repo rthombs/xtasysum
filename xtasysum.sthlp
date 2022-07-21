@@ -1,11 +1,11 @@
 {smcl}
-{* *! Version 1.1 13May2022}
-{hi:help xtasysum}{right: Version 1.1 May 13, 2022}
+{* *! Version 1.2 20Jul2022}
+{hi:help xtasysum}{right: Version 1.2 July 20, 2022}
 {hline}
 {title:Title}
 
 {phang}
-{bf:xtasysum {hline 2} Generate and summarize partial sums for modeling asymmetry with panel data.}
+{bf:xtasysum {hline 2} Generate, summarize, and visualize partial sums for modeling asymmetry with panel data.}
 
 {title:Syntax}
 
@@ -14,13 +14,17 @@
 {cmd:grfsave(}{it:string}{cmd:)} {cmd:csd} {cmd:CSDOpt(}{it:string asis}{cmd:)} {cmd:cips(}{it:numlist integer min=2 max=2}{cmd:)} 
 {cmd:CIPSOpt(}{it:string asis}{cmd:)} {cmd:NOgen}]
 
+{phang}You must {cmd:xtset} your data before using; see {help xtset}.
+
+{phang}{cmd:xtdcce2}, {cmd:xtcd2}, {cmd:xtcse2}, and {cmd:xtcips} must be installed. 
+
 
 {title:Description}
 
-{p 4 4 4}{cmd:xtasysum} generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial 
-sums around a threshold of zero are created. The two new variables appear as {it:var}_p and {it:var}_n, respectively. The variables can then be used to model and
-test for asymmetry using regression analysis. The user may also generate frequencies and summary statistics, test for cross-sectional dependence and non-stationarity,
-and generate graphs of the frequencies and partial sums. 
+{p 4 4 4}{cmd:xtasysum} generates, summarizes, and visualizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and 
+negative partial sums around a threshold of zero are created. The two new variables appear as {it:var}_p and {it:var}_n, respectively. The variables can then be 
+used to model and test for asymmetry using regression analysis. The user may also generate frequencies and summary statistics, test for cross-sectional dependence
+and non-stationarity, and generate graphs of the frequencies and partial sums. 
 
 
 {title:Options}
@@ -29,9 +33,10 @@ and generate graphs of the frequencies and partial sums.
 
 {phang}{opt Frequency} creates a table containing the frequencies of the partial sums by each variable in {varlist}.
 
-{phang}{opt Sum} creates a summary table of the partial sums for each variable in {varlist}; see {help xtsum}.
+{phang}{opt Sum} creates a summary table of the partial sums for each variable in {varlist}; see {help xtsum}. When {opt nogen} is specified, 
+a summary table of the original variable is provided.
 
-{phang}{opt fdm} generates a variable of the partial sums based on the first difference method (see Allison (2019) and York and Light (2017)). 
+{phang}{opt fdm} generates two variables of the partial sums based on the first difference method (see Allison (2019) and York and Light (2017)). 
 
 {phang}{opt GRSum} generates a line graph of the partial sums by panel. No graph is drawn, but a graph for each variable is saved. 
 
@@ -42,13 +47,13 @@ and generate graphs of the frequencies and partial sums.
 {phang}{opt grfsave(string)} saves the bar graph of the partial sums by panel with a specified name. 
 
 {phang}{opt csd} reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and 
-Pesaran 2016, 2019). This is a wrapper of Ditzen's (2021) {stata xtcse2} program.
+Pesaran 2016, 2019). This is a wrapper of Ditzen's (2021) {stata xtcse2} program. When {opt nogen} is specified, test results correspond to the original variable.
 
 {phang}{opt CSDOpt(string asis)} passes options to {stata xtcse2}.
 
 {phang}{opt cips(numlist integer min=2 max=2)} reports the Pesaran (2007) panel unit-root test in the presence of cross-sectional dependence. This is a wrapper 
 of the {stata xtcips} program (Burdisso and Sangiácomo 2016). The first integer refers to the maximum number of lags included in the test, and the second integer 
-is the autocorrelation order used in the Lagrange multiplier test (see {help xtcips}).
+is the autocorrelation order used in the Lagrange multiplier test (see {help xtcips}). When {opt nogen} is specified, test results correspond to the original variable.
 
 {phang}{opt CIPSOpt(string asis)} passes options to {stata xtcips}.
 
@@ -87,17 +92,13 @@ data for GDP per capita, the percentage of the population residing in urban area
 
 {p 4}If the partial sums are already defined:
 
-{p 8}{stata xtasysum lngdp_p lngdp_n, nogen csd} 
-
-{p 4}The options that can be abbreviated:
-
-{p 8}{stata xtasysum lngdp, t f s grs grf} 
+{p 8}{stata xtasysum lngdp_p lngdp_n, nogen} 
 
 
 
 {marker references}{title:References}
 
-{p 4 8} Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." {it:Socius}:1-12
+{p 4 8} Allison, Paul, D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." {it:Socius}: 1-12
 
 {p 4 8} Bailey, Natalia, George Kapetanios, and M. Hashem Pesaran. 2016. "Exponent of Cross-Sectional Dependence: Estimation and Inference." 
 {it:Journal of Applied Econometrics} 31: 929-960.
@@ -106,7 +107,7 @@ data for GDP per capita, the percentage of the population residing in urban area
 
 {p 4 8} Burdisso, Tamara and Máximo Sangiácomo. 2016. "Panel Time Series: Review of the Methodological Evolution." {it:The Stata Journal} 16(2): 424-442.
 
-{p 4 8} Ditzen, Jan. 2021. "Estimating Long-Run Effects and the Exponent of Cross-Sectional Dependence: An Update to xtdcce2." {it:The Stata Journal}, 21(3): 687-707.
+{p 4 8} Ditzen, Jan. 2021. "Estimating Long-Run Effects and the Exponent of Cross-Sectional Dependence: An Update to xtdcce2." {it:The Stata Journal} 21(3): 687-707.
 
 {p 4 8} Pesaran, M. Hashem. 2015. "Testing Weak Cross-Sectional Dependence in Large Panels." {it:Econometric Reviews} 34(6-10): 1089–1117
 
@@ -118,6 +119,10 @@ Large-T Data." {it:Sociological Methodology} 52(1): 1-29.
 
 {p 4 8} York, Richard and Ryan Light. 2017. "Directional Asymmetry in Sociological Analyses." {it:Socius} 3.
 
+
+{marker Acknowledgements}{title:Acknowledgements}
+
+Special thanks to Jared Fitzgerald and Xiaorui Huang for helpful comments and suggestions. 
 
 
 {marker about}{title:Author}
