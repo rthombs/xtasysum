@@ -25,7 +25,7 @@ A Stata command to generate and summarize partial sums for modeling asymmetry wi
 
 `grfsave(string)` saves the bar graph of the partial sums by panel with a specified name.
 
-`csd` reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and Pesaran 2016, 2019); This is a wrapper of Ditzen's (2021) `xtcse2` program.
+`csd` reports the Pesaran (2015) test for weak cross-sectional dependence and the exponent of cross-sectional dependence (Bailey, Kapetanios, and Pesaran 2016, 2019); This is a wrapper of Ditzen's (2021) `xtcse2` program. When `nogen` is specified, test results correspond to the original variable.
 
 `CSDOpt(string asis)` passes options to `xtcse2`.
 
