@@ -185,7 +185,7 @@ program define xtasysum, rclass sortpreserve
 				local t: display %12.1f `t'
 				loc rown "`rown' `v'"
 				display as text %12s abbrev("`v'",12) " {c |}" _c
-				di as result _column(15) %9.4f `mean'  _column(25) %9.4f `sd' _column(38) %9.4f `sdw'  _column(51) %9.4f `sdb' _column(66) `n' "/" `t'  _col(78) `N' 
+				di as result _column(15) %9.4f `mean'  _column(28) %-9.4f `sd' _column(41) %-9.4f `sdw'  _column(54) %-9.4f `sdb' _column(66) `n' "/" `t'  _col(78) `N' 
 			}
 			di as text "{hline 13}{c BT}{hline 70}" 
 
@@ -245,7 +245,7 @@ program define xtasysum, rclass sortpreserve
 		}	
 			
 			
-		***Tets for Non-Stationarity
+		***Test for Non-Stationarity
 		if "`cips'" != "" {
 			loc nvar : word count `varlist2'
 			tempname smat 
