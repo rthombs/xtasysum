@@ -13,7 +13,7 @@ A Stata command to generate and summarize partial sums for modeling asymmetry wi
 
 `Frequency` creates a table containing the frequencies of the partial sums by each variable in varlist.
 
-`Sum` creates a summary table of the partial sums for each variable in varlist; see `xtsum`.
+`Sum` creates a summary table of the partial sums for each variable in varlist; see `xtsum`. When `nogen` is specified, a summary table of the original variable is provided.
 
 `fdm` generates a variable of the partial sums based on the first difference method (see Allison (2019) and York and Light (2017)).
 
@@ -29,11 +29,11 @@ A Stata command to generate and summarize partial sums for modeling asymmetry wi
 
 `CSDOpt(string asis)` passes options to `xtcse2`.
 
-`cips(numlist integer min=2 max=2)` reports the Pesaran (2007) panel unit-root test in the presence of cross-sectional dependence. This is a wrapper of the `xtcips` program (Burdisso and Sangiácomo 2016). When specified, the first integer refers to the maximum number of lags included in the test, and the second number is the autocorrelation order used in the Lagrange multiplier test (see `xtcips`).
+`cips(numlist integer min=2 max=2)` reports the Pesaran (2007) panel unit-root test in the presence of cross-sectional dependence. This is a wrapper of the `xtcips` program (Burdisso and Sangiácomo 2016). When specified, the first integer refers to the maximum number of lags included in the test, and the second number is the autocorrelation order used in the Lagrange multiplier test (see `xtcips`). When `nogen` is specified, test results correspond to the original variable.
 
 `CIPSOpt(string asis)` passes options to `xtcips`.
 
-`NOgen` does not create partial sums for the variable. This option cannot be combined with threshold.
+`NOgen` does not create partial sums for the variable. This option cannot be combined with `threshold` or `fdm`. This option is useful if the partial sums have already been created or you are interested in examining the original variable.
 
  # Example 
     
@@ -55,22 +55,24 @@ To test for cross-sectional dependence and non-stationarity:
 
         xtasysum lngdp, csd cips(3 3)
 
-To generate a graph of the frequencies and partial sums:
-
-        xtasysum lngdp, grsum grfre
-
 To generate variables based on the first difference method:
 
         xtasysum lngdp, fdm
 
-If the partial sums are already defined:
+If the partial sums are already defined, then use `nogen` option to test for cross-sectional dependence:
 
         xtasysum lngdp_p lngdp_n, nogen csd
+        
+To generate a graph of the frequencies and partial sums:
 
-The options that can be abbreviated:
+        xtasysum lngdp, grsum grfre
+        
+This will produce the following graphs: 
 
-        xtasysum lngdp, t f s grs grf no
+![lngdp_sums](https://user-images.githubusercontent.com/40503845/180295093-73f50599-3291-4cbe-af99-de62ae4d1f52.png)
 
+
+![lngdp_fre](https://user-images.githubusercontent.com/40503845/180295091-98821c7a-4467-4dca-93c4-de0c0e10130e.png)
 
 # Install 
 
@@ -80,7 +82,7 @@ The options that can be abbreviated:
     
 # References 
 
-Allison, Paul D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." *Socius*:1-12. 
+Allison, Paul D. 2019. "Asymmetric Fixed-Effects Models for Panel Data." *Socius*: 1-12. 
 
 Bailey, Natalia, George Kapetanios, and M. Hashem Pesaran. 2016. "Exponent of Cross-Sectional Dependence: Estimation and Inference." *Journal of Applied Econometrics* 31: 929-960.
 
@@ -88,7 +90,7 @@ Bailey, Natalia, George Kapetanios, and M. Hashem Pesaran. 2019. "Exponent of Cr
 
 Burdisso, Tamara and Máximo Sangiácomo. 2016. "Panel Time Series: Review of the Methodological Evolution." *The Stata Journal* 16(2): 424-442.
 
-Ditzen, Jan. 2021. "Estimating Long-Run Effects and the Exponent of Cross-Sectional Dependence: An Update to xtdcce2." *The Stata Journal*, 21(3): 687-707.
+Ditzen, Jan. 2021. "Estimating Long-Run Effects and the Exponent of Cross-Sectional Dependence: An Update to xtdcce2." *The Stata Journal* 21(3): 687-707.
 
 Pesaran, M. Hashem. 2015. "Testing Weak Cross-Sectional Dependence in Large Panels." *Econometric Reviews* 34(6-10): 1089–1117.
 
@@ -97,6 +99,10 @@ Shin, Yongcheol, Byungchul Yu, and Matthew Greenwood-Nimmo. 2014. "Modelling Asy
 Thombs, Ryan. P., Xiaorui Huang, and Jared B. Fitzgerald. 2022. "What Goes Up Might Not Come Down: Modeling Directional Asymmetry with Large-N, Large-T Data." *Sociological Methodology* 52(1): 1-29. 
 
 York, Richard and Ryan Light. 2017. "Directional Asymmetry in Sociological Analyses." *Socius* 3.
+
+# Acknowledgements
+
+Special thanks to Jared Fitzgerald and Xiaorui Huang for helpful comments and suggestions. 
 
 # Author
 
