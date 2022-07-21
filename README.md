@@ -1,5 +1,5 @@
 # `xtasysum`
-A Stata command to generate and summarize partial sums for modeling asymmetry with panel data.
+A Stata command to generate, summarize, and visualize partial sums for modeling asymmetry with panel data.
 
 # Description 
 `xtasysum` generates and summarizes partial sums for modeling asymmetry with panel data. If no options are specified then positive and negative partial sums around a threshold of zero are created. The two new variables appear as *var*_p and *var*_n, respectively. The partial sums can be used to model and test for asymmetry using regression analysis as discussed in Thombs, Huang, and Fitzgerald ([2022](https://journals.sagepub.com/doi/full/10.1177/00811750211046307?casa_token=C_JdtpUuVa4AAAAA%3AorO41QdizSvK3JvxrFtVp9zCTWFZejtNLNvH-muj7dHa7ewiwR9Uk_rub2JCc-yNdLWP3BOExWkz1A)). The user may also generate frequencies and summary tables, test for cross-sectional dependence and non-stationarity, and generate graphs of the partial sums as well as their frequencies.
