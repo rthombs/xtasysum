@@ -1,8 +1,8 @@
-*! Version1.1 Ryan Thombs 5/13/22
+*! Version1.2 Ryan Thombs 7/20/22
 
 
 program define xtasysum, rclass sortpreserve
-        version 17
+        version 14
  
         syntax varlist(min=1 numeric ts) [if] [in] [, Threshold(real 0) Frequency Sum fdm GRSum GRFre grssave(string) grfsave(string) csd CSDOpt(string asis) cips(numlist integer min=2 max=2) CIPSOpt(string asis) NOgen] 
 		
@@ -59,6 +59,13 @@ program define xtasysum, rclass sortpreserve
 		***Don't combine nogen and threshold 
 		if "`nogen'" != "" & `th' != 0  {
 			di as error "The options nogen and threshold can't both be specified."
+			exit 198
+		}
+		
+		
+		***Don't combine nogen and fdm
+		if "`nogen'" != "" & "`fdm'" != ""  {
+			di as error "The options nogen and fdm can't both be specified."
 			exit 198
 		}
 			
@@ -131,14 +138,6 @@ program define xtasysum, rclass sortpreserve
 		}
 		
 		
-			
-			
-		***Make sure specifying nogen and frequency is what you want. 
-		if "`nogen'" != "" & "`frequency'" != ""  {
-			di in red "Warning:" 
-			di as text "nogen and frequency are specified together-are you sure you want that?"
-		}
-			
 			
 		***Generate variables based on Allison (2019) defintion of the first difference method
 		if "`fdm'" == "fdm"{
@@ -238,7 +237,12 @@ program define xtasysum, rclass sortpreserve
 			return matrix csd = `cmat'	
 			}
 			
-			
+		
+		***csd must be specified with csdopt. 
+		if "`csd'" == "" & "`csdopt'" != ""  {
+			di as error "csd must be specified."
+			exit 198
+		}	
 			
 			
 		***Tets for Non-Stationarity
@@ -282,6 +286,13 @@ program define xtasysum, rclass sortpreserve
 			matrix rownames `smat' = `sown'
 			return matrix cips = `smat'	
 			}
+			
+		
+		***cips must be specified with cipsopt.
+		if "`cips'" == "" & "`cipsopt'" != ""  {
+			di as error "cips must be specified."
+			exit 198
+		}
 
 			
 			
@@ -333,7 +344,6 @@ program define xtasysum, rclass sortpreserve
 
 		
 end
-
 
 
 
